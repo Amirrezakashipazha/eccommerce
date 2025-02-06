@@ -69,7 +69,7 @@ const Header = () => {
             color="white"
           />
         </button>
-        <div className={`w-[300px] h-full lg:w-full lg:h-[80px] py-8 lg:py-0 bg-white absolute top-0 z-10 transition-all transform left0 ${sideBarOpen ? "translate-x-0" : "translate-x-[-100%]"} lg:relative lg:left-auto`}>
+        <div className={`w-[300px] h-full lg:w-full lg:h-[80px] py-8 lg:py-0 bg-white absolute top-0 z-10 transition-all transform left-0 ${sideBarOpen ? "translate-x-0" : "translate-x-[-100%] lg:translate-x-0"} lg:relative lg:left-auto`}>
           <div className="max-w-[1200px] w-full px-4 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-between h-full gap-4">
             <Image src={'/assets/images/PAP_Logo.png'} width={133} height={51} alt="logo" />
             <div className="">
