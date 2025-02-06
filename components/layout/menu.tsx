@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
-export function MenuCustomList({ title, menuItems }: { title: string, menuItems: string[]}) {
+export function MenuCustomList({ title, menuItems }: { title: string, menuItems: string[] }) {
   const [openMenu, setOpenMenu] = React.useState(false);
 
   return (
@@ -18,6 +18,9 @@ export function MenuCustomList({ title, menuItems }: { title: string, menuItems:
         <Menu open={openMenu} handler={setOpenMenu} allowHover>
           <MenuHandler>
             <Button
+              placeholder=""
+              onPointerEnterCapture={() => { }}
+              onPointerLeaveCapture={() => { }}
               variant="text"
               className="flex items-center gap-3 text-xl font-normal capitalize tracking-normal"
             >
@@ -29,12 +32,24 @@ export function MenuCustomList({ title, menuItems }: { title: string, menuItems:
               />
             </Button>
           </MenuHandler>
-          <MenuList className="hidden gap-3 overflow-visible lg:grid">
+          <MenuList
+            placeholder=""
+            onPointerEnterCapture={() => { }}
+            onPointerLeaveCapture={() => { }}
+            className="hidden gap-3 overflow-visible lg:grid">
             <ul className="col-span-4 flex w-full flex-col gap-1">
               {menuItems.map((title) => (
                 <a href="#" key={title}>
-                  <MenuItem>
-                    <Typography variant="h6" color="blue-gray" className="mb-1 text-xl">
+                  <MenuItem
+                    placeholder=""
+                    onPointerEnterCapture={() => { }}
+                    onPointerLeaveCapture={() => { }}
+                  >
+                    <Typography
+                      placeholder=""
+                      onPointerEnterCapture={() => { }}
+                      onPointerLeaveCapture={() => { }}
+                      variant="h6" color="blue-gray" className="mb-1 text-xl">
                       {title}
                     </Typography>
                   </MenuItem>
@@ -47,7 +62,7 @@ export function MenuCustomList({ title, menuItems }: { title: string, menuItems:
 
       <ul className="flex flex-col items-start lg:hidden relative">
 
-        
+
         <li className="font-bold text-2xl w-full">
           {title}
         </li>

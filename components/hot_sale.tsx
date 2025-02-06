@@ -1,8 +1,5 @@
-import Image from "@/node_modules/next/image";
-import Link from "@/node_modules/next/link";
 import Card from "./card";
 import Seperator from "./seprator";
-import SvgIcon from "./svgIcon";
 
 export default function HotSale() {
 

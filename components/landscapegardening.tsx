@@ -1,9 +1,6 @@
 "use client"
 import Image from "@/node_modules/next/image";
-import Link from "@/node_modules/next/link";
-import Card from "./card";
 import Seperator from "./seprator";
-import SvgIcon from "./svgIcon";
 
 import {
     Button
@@ -24,7 +21,11 @@ export default function LandscapeGardening() {
                     Schedule your service appointment today!
                 </p>
                 <p className="text-error text-xl">*Service only available in Telangana and AndhraPradesh.</p>
-                <Button className="h-20 font-medium text-xl px-24 bg-primary-1 mt-14">
+                <Button
+                
+                placeholder=""
+                onPointerEnterCapture={() => { }}
+                onPointerLeaveCapture={() => { }}className="h-20 font-medium text-xl px-24 bg-primary-1 mt-14">
                     Book Now!
                 </Button>
             </div>

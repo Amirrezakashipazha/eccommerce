@@ -2,7 +2,7 @@
 import Image from '@/node_modules/next/image'
 import React, { useState } from 'react'
 import SvgIcon from "../svgIcon"
-import { Button, Input } from "@material-tailwind/react";
+import { Input } from "@material-tailwind/react";
 import { MenuCustomList } from './menu';
 import Link from '@/node_modules/next/link';
 import { Bars3Icon } from "@heroicons/react/24/outline";
@@ -80,7 +80,7 @@ const Header = () => {
                   }
                   return (
                     <li key={index} className="w-full lg:w-auto">
-                      <MenuCustomList menuItems={item.child || []} title={item.name} onSideBarClose={() => setSideBarOpen(false)} />
+                      <MenuCustomList menuItems={item.child || []} title={item.name} />
                     </li>
                   )
                 }
@@ -88,7 +88,10 @@ const Header = () => {
               </ul>
             </div>
             <div className="w-[203px] h-16">
-              <Input label="Search" className="h-full py-6 pr-6 text-xl" />
+              <Input label="Search" className="h-full py-6 pr-6 text-xl"
+                onPointerEnterCapture={() => { }}
+                onPointerLeaveCapture={() => { }}
+                crossOrigin="anonymous" />
             </div>
           </div>
           <button className='absolute top-3 right-3' onClick={() => setSideBarOpen(false)}>

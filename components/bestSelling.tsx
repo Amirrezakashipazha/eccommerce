@@ -1,8 +1,5 @@
-import Image from "@/node_modules/next/image";
-import Link from "@/node_modules/next/link";
 import Card from "./card";
 import Seperator from "./seprator";
-import SvgIcon from "./svgIcon";
 
 export default function BestSelling() {
 
@@ -26,10 +23,6 @@ export default function BestSelling() {
             </div>
             <ul className="w-full flex flex-col lg:flex-row-reverse justify-between items-center gap-10">
                 {sellingValue.map((item, index) => (
-                    // <li key={index} className="flex flex-col items-center justify-center gap-10">
-                    //     <Image src={item.image} width={180} height={180} alt={item.title} />
-                    //     <p className="text-2xl font-bold tracking-[3px]">{item.title}</p>
-                    // </li>
                     <Card key={index} image={item.image} text={"Shop Now"} />
                 ))}
             </ul>

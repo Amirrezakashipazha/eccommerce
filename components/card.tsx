@@ -18,7 +18,11 @@ export default function Card({ image, text, caption }: { image: string, text: st
                 />
             </div>
             {caption}
-            <Button className="h-20 font-medium text-3xl bg-primary-1">
+            <Button 
+                                                placeholder=""
+                                                onPointerEnterCapture={() => { }}
+                                                onPointerLeaveCapture={() => { }}
+            className="h-20 font-medium text-3xl bg-primary-1">
                 {text}
             </Button>
 
