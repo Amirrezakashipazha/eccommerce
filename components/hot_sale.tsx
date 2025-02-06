@@ -62,7 +62,7 @@ export default function HotSale() {
                 <h2 className="text-text text-[48px] leading-[5.5rem] text-center">Hot Sale</h2>
                 <Seperator />
             </div>
-            <ul className="w-full grid grid-cols-4 items-center gap-10">
+            <ul className="w-full grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  grid-cols-1 items-center gap-10">
                 {hotSaleValue.map((item, index) => (
                     <div className="col-span-1" key={index}>
                         <Card image={item.image} text={"Buy"} caption={item.caption} />

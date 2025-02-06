@@ -11,8 +11,8 @@ import {
 export default function LandscapeGardening() {
 
     return (
-        <div className="w-full mx-auto max-w-[1200px] px-10 mb-[120px] gap-10 flex">
-            <div className=" w-full">
+        <div className="w-full mx-auto max-w-[1200px] px-10 mb-[120px] gap-10 flex flex-col lg:flex-row">
+            <div className=" w-full flex flex-col items-center lg:items-start">
                 <h2 className="text-7xl text-text">Landscape Gardening</h2>
                 <Seperator />
                 <p className="text-text text-3xl leading-[28px]">

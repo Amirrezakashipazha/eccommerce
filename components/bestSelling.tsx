@@ -24,7 +24,7 @@ export default function BestSelling() {
                 <h2 className="text-text text-[48px] leading-[5.5rem] text-center">Best Selling</h2>
                 <Seperator />
             </div>
-            <ul className="w-full flex flex-row-reverse justify-between items-center gap-10">
+            <ul className="w-full flex flex-col lg:flex-row-reverse justify-between items-center gap-10">
                 {sellingValue.map((item, index) => (
                     // <li key={index} className="flex flex-col items-center justify-center gap-10">
                     //     <Image src={item.image} width={180} height={180} alt={item.title} />

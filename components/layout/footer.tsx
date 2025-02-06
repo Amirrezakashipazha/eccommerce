@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="w-full bg-primary-2 text-xl text-white px-10">
       <div className='max-w-[1200px] w-full px-4 mx-auto flex items-center justify-between h-full py-16'>
-        <ul className='flex flex-cow justify-between items-start w-full'>
+        <ul className='flex lg:flex-row flex-col justify-between items-center lg:items-start w-full gap-4'>
           <li>
             <Image src={'/assets/images/PAP_Logo_footer.png'} width={260} height={78} alt="logo" />
 

@@ -22,7 +22,7 @@ export default function Celebs() {
         <Seperator />
       </div>
       <ul className="w-full grid grid-rows-2 gap-4">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
           {celbImage.slice(0, 4).map((item, index) => (
             <div key={index} className="relative w-full rounded-[8px] h-[310px] hover:scale-90 cursor-pointer transition-all duration-500">
               <Image
@@ -35,7 +35,7 @@ export default function Celebs() {
           ))}
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
           {celbImage.slice(4).map((item, index) => (
             <div key={index + 4} className="relative w-full rounded-[8px] h-[310px] hover:scale-90 cursor-pointer transition-all duration-500">
               <Image

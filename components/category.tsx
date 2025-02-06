@@ -26,15 +26,15 @@ export default function Category() {
         },
     ]
     return (
-        <div className="w-full mx-auto max-w-[1200px]  px-10 mt-14 mb-[120px]">
+        <div className="w-full mx-auto max-w-[1200px] px-10 mt-14 mb-[120px]">
             <Link className="text-primary-1 flex gap-1 items-center text-2xl justify-end mb-9" href={"#"}
             >
                 See all
                 <SvgIcon src="/assets/images/more.svg" />
             </Link>
-            <ul className="w-full flex flex-row-reverse justify-between items-center">
+            <ul className="w-full flex flex-row-reverse flex-wrap justify-between items-center">
                 {categoryValue.map((item, index) => (
-                    <li key={index} className="flex flex-col items-center justify-center gap-10 hover:scale-110 cursor-pointer transition-all">
+                    <li key={index} className="flex w-full sm:w-auto flex-col items-center justify-center gap-10 hover:scale-110 cursor-pointer transition-all">
                         <Image src={item.image} width={180} height={180} alt={item.title} />
                         <p className="text-2xl font-bold tracking-[3px]">{item.title}</p>
                     </li>
