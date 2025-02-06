@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+
+  app_local:
+    profiles: [local]
+    container_name: Test
+    image: ecommerce_app_local
+    build:
+      context: .
+      dockerfile: ./.docker/DockerFile.dev
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
+    environment:
+      - WATCHPACK_POLLING=true
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+      - /.env
+    ports:
+      - "${PORT:-3000}:3000"
+    networks:
+      - local
+
+  app_production:
+    profiles: [production, staging]
+    container_name: Test
+    image: ecommerce_app_production
+    build:
+      context: .
+      dockerfile: ./.docker/DockerFile.prod
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
+    networks:
+      - local
+    restart: always
+
+networks:
+  local:
+    driver: bridge
+
